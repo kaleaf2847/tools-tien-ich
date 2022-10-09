@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    font-family: 'Roboto', sans-serif;
+  }
+
+  body {
+    background-color: #faf9ff;
+  }
+}
+
+@layer components {
+  .button {
+    display: block;
+    color: #1f2537;
+    background-color: #f9fafb;
+    transition-duration: 0.2s;
+    cursor: pointer;
+  }
+  .button:hover {
+    color: #222;
+    background-color: #e7e9ed;
+  }
+  .bg-blue-to-green {
+    background-image: linear-gradient(to right, #0f82c2, #00e5ad);
+    color: white;
+  }
+}
+
+@layer utilities {
+  .button-active {
+    color: #333;
+    background-color: #e7e9ed;
+  }
+}
