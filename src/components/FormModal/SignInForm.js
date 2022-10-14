@@ -1,5 +1,4 @@
-import { InputText } from '@components/InputText';
-import { SubmitFormButton } from '@components/SubmitFormButton';
+import { InputText, SubmitFormButton } from '@components';
 import { useState } from 'react';
 
 function SignInForm() {

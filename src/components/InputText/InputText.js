@@ -81,7 +81,7 @@ function InputText({
               setValue('');
               inputE.current.focus();
             }}
-            className="cursor-pointer p-2 text-gray-500 hover:text-black duration-100"
+            className="cursor-pointer px-2 pt-3 sm:p-2 text-gray-500 hover:text-black duration-100"
           >
             xóa
           </span>

@@ -2,18 +2,21 @@ import { XIcon } from '@components/base/Icons';
 import { Modal } from '@components/base/Modal';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
+import { memo } from 'react';
 import SignInForm from './SignInForm';
 import SignUpForm from './SignUpForm';
 
 function FormModal({ setShowModal, showModal, modalType = 'sign in', setModalType }) {
-  console.log('render-fromModal');
-
   const handleCloseModal = () => {
     setShowModal(false);
   };
 
   return (
-    <Modal show={showModal} onClose={handleCloseModal} className="w-[486px]">
+    <Modal
+      show={showModal}
+      onClose={handleCloseModal}
+      className={clsx('sm:w-[486px] w-11/12 mx-auto', modalType == 'sign in' ? '' : 'h-5/6')}
+    >
       <div className="mx-4 py-3">
         <div className="flex justify-end">
           <button onClick={handleCloseModal} className="opacity-75 hover:opacity-100 duration-100">
@@ -51,4 +54,4 @@ FormModal.propTypes = {
   setModalType: PropTypes.func,
 };
 
-export default FormModal;
+export default memo(FormModal);

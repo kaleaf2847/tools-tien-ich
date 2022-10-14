@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 import PropTypes from 'prop-types';
 
-function Modal({ show, onClose, children, className = 'w-[486px] h-3/4' }) {
+function Modal({ show, onClose, children, className = 'sm:w-[486px] w-full h-3/4' }) {
   const [isBrowser, setIsBrowser] = useState(false);
 
   useEffect(() => {
@@ -24,7 +24,7 @@ function Modal({ show, onClose, children, className = 'w-[486px] h-3/4' }) {
               e.stopPropagation();
             }}
             className={clsx(
-              'absolute bottom-1/2 right-1/2 translate-x-1/2 translate-y-1/2 bg-gray-100 rounded-xl overflow-hidden',
+              'absolute bottom-1/2 right-1/2 translate-x-1/2 translate-y-1/2 bg-gray-100 rounded-xl overflow-scroll sm:overflow-hidden',
               className,
             )}
           >

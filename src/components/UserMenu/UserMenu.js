@@ -1,6 +1,6 @@
 import { SignOutIcon, UserIcon } from '@components/base/Icons';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import { memo, useEffect, useState } from 'react';
 
 function UserMenu() {
   const [showDropMenu, setShowDropMenu] = useState(false);
@@ -59,4 +59,4 @@ function UserMenu() {
   );
 }
 
-export default UserMenu;
+export default memo(UserMenu);

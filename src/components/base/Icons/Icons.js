@@ -29,6 +29,86 @@ SearchIcon.propTypes = {
   class: PropTypes.string,
 };
 
+export const HomeIcon = ({ width = 24, height = 24, className, ...props }) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="currentColor"
+      width={width}
+      height={height}
+      className={clsx(className, 'inline-block')}
+      {...props}
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+      />
+    </svg>
+  );
+};
+
+HomeIcon.propTypes = {
+  width: PropTypes.number,
+  height: PropTypes.number,
+  class: PropTypes.string,
+};
+
+export const PhoneIcon = ({ width = 24, height = 24, className, ...props }) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="currentColor"
+      width={width}
+      height={height}
+      className={clsx(className, 'inline-block')}
+      {...props}
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"
+      />
+    </svg>
+  );
+};
+
+PhoneIcon.propTypes = {
+  width: PropTypes.number,
+  height: PropTypes.number,
+  class: PropTypes.string,
+};
+
+export const MenuIcon = ({ width = 24, height = 24, className, ...props }) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="currentColor"
+      width={width}
+      height={height}
+      className={clsx(className, 'inline-block')}
+      {...props}
+    >
+      <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+    </svg>
+  );
+};
+
+MenuIcon.propTypes = {
+  width: PropTypes.number,
+  height: PropTypes.number,
+  class: PropTypes.string,
+};
+
 export const CheckIcon = ({ width = 24, height = 24, className, ...props }) => {
   return (
     <svg
@@ -320,6 +400,7 @@ SettingIcon.propTypes = {
   height: PropTypes.number,
   class: PropTypes.string,
 };
+
 export const SignOutIcon = ({ width = 24, height = 24, className, ...props }) => {
   return (
     <svg
@@ -343,6 +424,71 @@ export const SignOutIcon = ({ width = 24, height = 24, className, ...props }) =>
 };
 
 SignOutIcon.propTypes = {
+  width: PropTypes.number,
+  height: PropTypes.number,
+  class: PropTypes.string,
+};
+
+export const CrownIcon = ({ width = 24, height = 24, className, ...props }) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 256 256"
+      width={width}
+      height={height}
+      className={clsx(className, 'inline-block')}
+      {...props}
+    >
+      <rect width="256" height="256" fill="none" />
+      <path
+        d="M45.1,196a8.1,8.1,0,0,0,10,5.9,273,273,0,0,1,145.7,0,8.1,8.1,0,0,0,10-5.9L236.3,87.7a8,8,0,0,0-11-9.2L174.7,101a8.1,8.1,0,0,1-10.3-3.4L135,44.6a8,8,0,0,0-14,0l-29.4,53A8.1,8.1,0,0,1,81.3,101L30.7,78.5a8,8,0,0,0-11,9.2Z"
+        fill="none"
+        stroke="#000"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="12"
+      />
+      <path
+        d="M96,161.7a297.7,297.7,0,0,1,64,0"
+        fill="none"
+        stroke="#000"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="12"
+      />
+    </svg>
+  );
+};
+
+CrownIcon.propTypes = {
+  width: PropTypes.number,
+  height: PropTypes.number,
+  class: PropTypes.string,
+};
+
+export const CoinIcon = ({ width = 24, height = 24, className, ...props }) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="currentColor"
+      width={width}
+      height={height}
+      className={clsx(className, 'inline-block')}
+      {...props}
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125"
+      />
+    </svg>
+  );
+};
+
+CoinIcon.propTypes = {
   width: PropTypes.number,
   height: PropTypes.number,
   class: PropTypes.string,

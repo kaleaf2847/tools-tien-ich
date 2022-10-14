@@ -1,5 +1,4 @@
-import { InputText } from '@components/InputText';
-import { SubmitFormButton } from '@components/SubmitFormButton';
+import { InputText, SubmitFormButton } from '@components';
 import useValidate from '@hooks/useValidate';
 
 function SignUpForm() {
@@ -7,7 +6,7 @@ function SignUpForm() {
   const [lastnameStatus, LastnameValue, setLastnameValue] = useValidate();
   const [usernameStatus, UsernameValue, setUsernameValue] = useValidate('username');
   const [passwordStatus, PasswordValue, setPasswordValue] = useValidate('password');
-  const [retypePassStatus, RetypePassValue, setRetypePassValue] = useValidate('retype', 'sign-up', 'password');
+  const [retypePassStatus, RetypePassValue, setRetypePassValue] = useValidate('retype', 0, 'sign-up', 'password');
   const [emailStatus, EmailValue, setEmailValue] = useValidate('email');
   const isDisableSubmitButton =
     firstnameStatus.isWarning ||
@@ -25,7 +24,7 @@ function SignUpForm() {
 
   return (
     <form id="sign-up">
-      <div className="flex justify-between">
+      <div className="sm:flex sm:justify-between">
         <InputText
           isWarning={firstnameStatus.isWarning}
           messsage={firstnameStatus.messsage}
@@ -36,6 +35,7 @@ function SignUpForm() {
           name="firstname"
           id="firstname"
           maxLength={128}
+          className="w-full sm:w-52"
         />
         <InputText
           isWarning={lastnameStatus.isWarning}
@@ -47,6 +47,7 @@ function SignUpForm() {
           name="lastname"
           id="lastname"
           maxLength={128}
+          className="w-full sm:w-52"
         />
       </div>
       <InputText
@@ -61,7 +62,7 @@ function SignUpForm() {
         id="username"
         maxLength={24}
       />
-      <div className="flex justify-between">
+      <div className="sm:flex sm:justify-between">
         <InputText
           isWarning={passwordStatus.isWarning}
           messsage={passwordStatus.messsage}
@@ -73,6 +74,7 @@ function SignUpForm() {
           name="password"
           id="password"
           maxLength={128}
+          className="w-full sm:w-52"
         />
         <InputText
           isWarning={retypePassStatus.isWarning}
@@ -85,6 +87,7 @@ function SignUpForm() {
           name="retype-pass"
           id="retype-pass"
           maxLength={128}
+          className="w-full sm:w-52"
         />
       </div>
       <InputText

@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
-import { DefaultLayout } from '@layouts/DefaultLayout';
 import Link from 'next/link';
 import { CreditCardIcon, SignOutIcon, UserIcon } from '@components/base/Icons';
+import { BreadCrumb } from '@components';
 
 function ProfileLayout({ children }) {
   return (
-    <div className="flex justify-around my-20 mx-auto w-10/12">
-      <div className="w-1/5 bg-white rounded-xl shadow-md pb-6 h-fit">
+    <div className="flex justify-around my-20 mx-auto lg:w-10/12 sm:w-11/12 w-full">
+      <div className="md:block hidden lg:w-1/5 w-1/4 bg-white rounded-xl shadow-md pb-6 h-fit">
         <div className="m-4 text-center child:my-1">
           <div className="text-2xl">UserName</div>
           <div className="text-gray-700 text-sm">Id: 12980371092</div>
@@ -42,12 +42,8 @@ function ProfileLayout({ children }) {
           </ul>
         </div>
       </div>
-      <div className="w-9/12">
-        <div className="m-2 text-lg child:px-2 child-hover:text-sky-400 cursor-pointer">
-          <span>Trang chủ</span>
-          <span>/</span>
-          <span>Cá nhân</span>
-        </div>
+      <div className="w-full sm:w-8/12 lg:w-9/12">
+        <BreadCrumb />
         <div className="bg-white rounded-xl shadow-md pb-10">{children}</div>
       </div>
     </div>

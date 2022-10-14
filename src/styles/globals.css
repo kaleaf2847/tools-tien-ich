@@ -9,14 +9,23 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    -webkit-tap-highlight-color: transparent;
+    font-size: 98%;
   }
 
   html {
     font-family: 'Roboto', sans-serif;
+    overflow-y: overlay;
   }
 
   body {
     background-color: #faf9ff;
+  }
+
+  @media (min-width: 640px) {
+    * {
+      font-size: 100%;
+    }
   }
 }
 
