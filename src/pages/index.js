@@ -48,7 +48,7 @@ const items = [
 
 function Home() {
   const [numberOfItem, setNumberOfItem] = useState();
-  console.log(123);
+
   const handleResizeWidth = () => {
     if (window.innerWidth >= 1280) {
       setNumberOfItem(10);
@@ -63,7 +63,6 @@ function Home() {
 
   useEffect(() => {
     handleResizeWidth();
-    setNumberOfItem(window.innerWidth);
     window.addEventListener('resize', handleResizeWidth);
     return () => {
       window.removeEventListener('resize', handleResizeWidth);
