@@ -56,6 +56,8 @@ function Home() {
       setNumberOfItem(8);
     } else if (window.innerWidth >= 768) {
       setNumberOfItem(6);
+    } else if (window.innerWidth >= 640) {
+      setNumberOfItem(4);
     } else {
       setNumberOfItem(2);
     }

@@ -30,7 +30,11 @@ function useValidate(validate, defaultValue = 0, formId, inputId) {
         messsage = 'Mật khẩu nhập lại không chính xác';
       }
     } else if (validate == 'email') {
-      if (value.search(/[@]/) != -1) {
+      if (
+        value.search(
+          /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+        ) != -1
+      ) {
         isWarning = false;
       } else {
         isWarning = true;

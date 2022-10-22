@@ -3,6 +3,7 @@ import {
   CreditCardIcon,
   CrownIcon,
   HomeIcon,
+  InformationIcon,
   MenuIcon,
   SignOutIcon,
   UserIcon,
@@ -65,8 +66,8 @@ function MobileMenu() {
               <div>
                 <div className="text-center">
                   <p className="text-xl mt-4">USERNAME</p>
-                  <p className="text-amber-300 text-lg">VIP</p>
-                  <p className="text-lg">
+                  {/* <p className="text-amber-300 text-lg">VIP</p> */}
+                  <p className="text-lg mt-4">
                     Số dư: 100.000 <CoinIcon width={20} height={20} className="-translate-y-px" />
                   </p>
                 </div>
@@ -106,7 +107,7 @@ function MobileMenu() {
                       </a>
                     </Link>
                   </li>
-                  <li
+                  {/* <li
                     onClick={() => {
                       setIsOpen(false);
                     }}
@@ -114,6 +115,17 @@ function MobileMenu() {
                     <Link href="/">
                       <a>
                         <CrownIcon className="mr-0.5 -translate-y-px" /> Vip
+                      </a>
+                    </Link>
+                  </li> */}
+                  <li
+                    onClick={() => {
+                      setIsOpen(false);
+                    }}
+                  >
+                    <Link href="/contact">
+                      <a>
+                        <InformationIcon className="mr-0.5 -translate-y-px" /> Liên hệ
                       </a>
                     </Link>
                   </li>

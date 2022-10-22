@@ -74,7 +74,7 @@ function SignUpForm() {
           name="password"
           id="password"
           maxLength={128}
-          className="w-full sm:w-52"
+          className="w-full sm:w-52 mr-1.5"
         />
         <InputText
           isWarning={retypePassStatus.isWarning}
